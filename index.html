@@ -59,63 +59,7 @@
         !function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
     </script>
     <style id='cf-frontend-style-inline-css'>
-        @font-face {
-            font-family: 'Tahoma';
-            font-weight: 400;
-            src: url('https://revistatimbo.com.ar/wp-content/uploads/2024/02/Tahoma-Regular-font.ttf') format('truetype');
-        }
 
-        @font-face {
-            font-family: 'Tahoma';
-            font-weight: 700;
-            src: url('https://revistatimbo.com.ar/wp-content/uploads/2024/02/TAHOMABD.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Trebuchet';
-            font-weight: 400;
-            src: url('https://revistatimbo.com.ar/wp-content/uploads/2024/02/trebuc.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Trebuchet';
-            font-weight: 400;
-            src: url('https://revistatimbo.com.ar/wp-content/uploads/2024/02/Trebuchet-MS-Italic.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Verdana';
-            font-weight: 400;
-            src: url('https://revistatimbo.com.ar/wp-content/uploads/2024/02/verdana.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Verdana';
-            font-weight: 700;
-            src: url('https://revistatimbo.com.ar/wp-content/uploads/2024/02/verdana-bold.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Verdana';
-            font-weight: 700;
-            src: url('https://revistatimbo.com.ar/wp-content/uploads/2024/02/verdana-bold-italic.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Century2022';
-            font-weight: 100;
-            font-display: auto;
-            font-fallback: Serif;
-            src: url('https://revistatimbo.com.ar/wp-content/uploads/2022/09/CenturyGothic.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Century2022';
-            font-weight: 700;
-            font-display: auto;
-            font-fallback: Serif;
-            src: url('https://revistatimbo.com.ar/wp-content/uploads/2022/09/GOTHICB0.ttf') format('truetype');
-        }
     </style>
     <style id='wp-emoji-styles-inline-css'>
         img.wp-smiley,
@@ -1767,8 +1711,7 @@
                             data-id="61d13cc8" data-element_type="widget" data-widget_type="theme-site-logo.default">
                             <div class="elementor-widget-container">
                                 <a href="https://revistatimbo.com.ar">
-                                    <img width="300" height="300"
-                                        src="./imagenes/La Imprompta-f-blanco.png"
+                                    <img width="300" height="300" src="./imagenes/La Imprompta-f-blanco.png"
                                         class="attachment-full size-full wp-image-16261" alt=""
                                         srcset="./imagenes/La Imprompta-f-blanco.pngw, ./imagenes/La Imprompta-f-blanco.png"
                                         sizes="(max-width: 300px) 100vw, 300px" /> </a>
@@ -1795,114 +1738,90 @@
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8183">
                                                     <a href="https://revistatimbo.com.ar/category/conversa/conversas/"
-                                                        class="elementor-sub-item">CONVERSA</a></li>
+                                                        class="elementor-sub-item">CONVERSA</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6643">
                                                     <a href="https://revistatimbo.com.ar/category/conversa/cromanon/"
-                                                        class="elementor-sub-item">CROMAÑÓN</a></li>
+                                                        class="elementor-sub-item">CROMAÑÓN</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6637">
                                                     <a href="https://revistatimbo.com.ar/category/conversa/cosmovision-andina/"
-                                                        class="elementor-sub-item">COSMOVISIÓN ANDINA</a></li>
+                                                        class="elementor-sub-item">COSMOVISIÓN ANDINA</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12885">
                                                     <a href="https://revistatimbo.com.ar/category/conversa/que-vivan-las-musicas/"
-                                                        class="elementor-sub-item">QUE VIVAN LAS MÚSICAS</a></li>
+                                                        class="elementor-sub-item">QUE VIVAN LAS MÚSICAS</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-3644">
                                             <a href="https://revistatimbo.com.ar/category/palabra/"
-                                                class="elementor-item">PALABRA</a>
+                                                class="elementor-item">TIEMPOS VERBALES</a>
                                             <ul class="sub-menu elementor-nav-menu--dropdown">
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8353">
                                                     <a href="https://revistatimbo.com.ar/category/palabra/palabras/"
-                                                        class="elementor-sub-item">PALABRA</a></li>
+                                                        class="elementor-sub-item">YO</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6636">
                                                     <a href="https://revistatimbo.com.ar/category/palabra/cuchateesta/"
-                                                        class="elementor-sub-item">CUCHATE ESTA</a></li>
+                                                        class="elementor-sub-item">TÚ</a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8353">
+                                                    <a href="https://revistatimbo.com.ar/category/palabra/palabras/"
+                                                        class="elementor-sub-item">ÉL</a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6636">
+                                                    <a href="https://revistatimbo.com.ar/category/palabra/cuchateesta/"
+                                                        class="elementor-sub-item">ELLOS</a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6636">
+                                                    <a href="https://revistatimbo.com.ar/category/palabra/cuchateesta/"
+                                                        class="elementor-sub-item">NOSOTROS</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-3643">
                                             <a href="https://revistatimbo.com.ar/category/critica-cultural/"
-                                                class="elementor-item">CRITIMBÓ</a>
-                                            <ul class="sub-menu elementor-nav-menu--dropdown">
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6639">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/teatro/"
-                                                        class="elementor-sub-item">TEATRO</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6646">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/literatura/"
-                                                        class="elementor-sub-item">LITERATURA</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6638">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/que-viva/"
-                                                        class="elementor-sub-item">QUE VIVA LA MÚSICA</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6644">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/cine/"
-                                                        class="elementor-sub-item">CINE</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8202">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/visuales/"
-                                                        class="elementor-sub-item">VISUALES</a></li>
-                                            </ul>
+                                                class="elementor-item">POETAS DEL PROMPT</a>
+
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-8579">
                                             <a href="https://revistatimbo.com.ar/category/salasabiertas/"
-                                                class="elementor-item">SALAS ABIERTAS</a>
-                                            <ul class="sub-menu elementor-nav-menu--dropdown">
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9697">
-                                                    <a href="https://revistatimbo.com.ar/category/salasabiertas/"
-                                                        class="elementor-sub-item">SALAS ABIERTAS</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6649">
-                                                    <a href="https://revistatimbo.com.ar/category/guiadeespaciosculturales/"
-                                                        class="elementor-sub-item">GUIA DE ESPACIOS CULTURALES</a></li>
-                                            </ul>
+                                                class="elementor-item">FULBITO</a>
+
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-6647">
                                             <a href="https://revistatimbo.com.ar/category/biri-biri/"
-                                                class="elementor-item">BIRI BIRI</a>
-                                            <ul class="sub-menu elementor-nav-menu--dropdown">
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6648">
-                                                    <a href="https://revistatimbo.com.ar/category/biri-biri/biribiri/"
-                                                        class="elementor-sub-item">BIRI BIRI</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6640">
-                                                    <a href="https://revistatimbo.com.ar/category/carnaval/"
-                                                        class="elementor-sub-item">CARNAVAL DE MI BARRIO</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6641">
-                                                    <a href="https://revistatimbo.com.ar/category/biri-biri/cambiar/"
-                                                        class="elementor-sub-item">CAMBIAR LAS COSTUMBRES</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6642">
-                                                    <a href="https://revistatimbo.com.ar/category/biri-biri/con-queso-y-crema-cocina-cualquiera/"
-                                                        class="elementor-sub-item">CON QUESO Y CREMA COCINA
-                                                        CUALQUIERA</a></li>
-                                            </ul>
+                                                class="elementor-item">RECITALES</a>
+
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7962">
                                             <a href="https://revistatimbo.com.ar/category/biri-biri/tinta/"
-                                                class="elementor-item">RESEÑAS</a></li>
+                                                class="elementor-item">LA BIBLIO</a>
+                                        </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4193">
                                             <a href="https://revistatimbo.com.ar/category/buenezas/"
-                                                class="elementor-item">FILA DEL ALMACÉN</a></li>
+                                                class="elementor-item">FILA DEL ALMACÉN</a>
+                                        </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15977">
                                             <a href="https://revistatimbo.com.ar/category/red/"
-                                                class="elementor-item">RED</a></li>
+                                                class="elementor-item">RED</a>
+                                        </li>
                                         <li
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-14695">
                                             <a href="https://revistatimbo.com.ar/somos/"
@@ -1911,11 +1830,13 @@
                                                 <li
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15624">
                                                     <a href="https://revistatimbo.com.ar/somos/"
-                                                        class="elementor-sub-item">SOMOS</a></li>
+                                                        class="elementor-sub-item">SOMOS</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11797">
                                                     <a href="https://revistatimbo.com.ar/category/editorial/"
-                                                        class="elementor-sub-item">EDITORIAL</a></li>
+                                                        class="elementor-sub-item">EDITORIAL</a>
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -1947,11 +1868,13 @@
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8183">
                                                     <a href="https://revistatimbo.com.ar/category/conversa/conversas/"
-                                                        class="elementor-sub-item" tabindex="-1">CONVERSA</a></li>
+                                                        class="elementor-sub-item" tabindex="-1">CONVERSA</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6643">
                                                     <a href="https://revistatimbo.com.ar/category/conversa/cromanon/"
-                                                        class="elementor-sub-item" tabindex="-1">CROMAÑÓN</a></li>
+                                                        class="elementor-sub-item" tabindex="-1">CROMAÑÓN</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6637">
                                                     <a href="https://revistatimbo.com.ar/category/conversa/cosmovision-andina/"
@@ -1961,106 +1884,75 @@
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12885">
                                                     <a href="https://revistatimbo.com.ar/category/conversa/que-vivan-las-musicas/"
                                                         class="elementor-sub-item" tabindex="-1">QUE VIVAN LAS
-                                                        MÚSICAS</a></li>
+                                                        MÚSICAS</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-3644">
                                             <a href="https://revistatimbo.com.ar/category/palabra/"
-                                                class="elementor-item" tabindex="-1">PALABRA</a>
+                                                class="elementor-item" tabindex="-1">TIEMPOS VERBALES</a>
                                             <ul class="sub-menu elementor-nav-menu--dropdown">
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8353">
                                                     <a href="https://revistatimbo.com.ar/category/palabra/palabras/"
-                                                        class="elementor-sub-item" tabindex="-1">PALABRA</a></li>
+                                                        class="elementor-sub-item" tabindex="-1">YO</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6636">
                                                     <a href="https://revistatimbo.com.ar/category/palabra/cuchateesta/"
-                                                        class="elementor-sub-item" tabindex="-1">CUCHATE ESTA</a></li>
+                                                        class="elementor-sub-item" tabindex="-1">TÚ</a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6636">
+                                                    <a href="https://revistatimbo.com.ar/category/palabra/cuchateesta/"
+                                                        class="elementor-sub-item" tabindex="-1">ÉL</a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6636">
+                                                    <a href="https://revistatimbo.com.ar/category/palabra/cuchateesta/"
+                                                        class="elementor-sub-item" tabindex="-1">ELLOS</a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6636">
+                                                    <a href="https://revistatimbo.com.ar/category/palabra/cuchateesta/"
+                                                        class="elementor-sub-item" tabindex="-1">NOSOTROS</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-3643">
                                             <a href="https://revistatimbo.com.ar/category/critica-cultural/"
-                                                class="elementor-item" tabindex="-1">CRITIMBÓ</a>
-                                            <ul class="sub-menu elementor-nav-menu--dropdown">
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6639">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/teatro/"
-                                                        class="elementor-sub-item" tabindex="-1">TEATRO</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6646">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/literatura/"
-                                                        class="elementor-sub-item" tabindex="-1">LITERATURA</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6638">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/que-viva/"
-                                                        class="elementor-sub-item" tabindex="-1">QUE VIVA LA MÚSICA</a>
-                                                </li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6644">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/cine/"
-                                                        class="elementor-sub-item" tabindex="-1">CINE</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8202">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/visuales/"
-                                                        class="elementor-sub-item" tabindex="-1">VISUALES</a></li>
-                                            </ul>
+                                                class="elementor-item" tabindex="-1">POETAS DEL PROMPT</a>
+
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-8579">
                                             <a href="https://revistatimbo.com.ar/category/salasabiertas/"
-                                                class="elementor-item" tabindex="-1">SALAS ABIERTAS</a>
-                                            <ul class="sub-menu elementor-nav-menu--dropdown">
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9697">
-                                                    <a href="https://revistatimbo.com.ar/category/salasabiertas/"
-                                                        class="elementor-sub-item" tabindex="-1">SALAS ABIERTAS</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6649">
-                                                    <a href="https://revistatimbo.com.ar/category/guiadeespaciosculturales/"
-                                                        class="elementor-sub-item" tabindex="-1">GUIA DE ESPACIOS
-                                                        CULTURALES</a></li>
-                                            </ul>
+                                                class="elementor-item" tabindex="-1">FULBITO</a>
+
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-6647">
                                             <a href="https://revistatimbo.com.ar/category/biri-biri/"
-                                                class="elementor-item" tabindex="-1">BIRI BIRI</a>
-                                            <ul class="sub-menu elementor-nav-menu--dropdown">
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6648">
-                                                    <a href="https://revistatimbo.com.ar/category/biri-biri/biribiri/"
-                                                        class="elementor-sub-item" tabindex="-1">BIRI BIRI</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6640">
-                                                    <a href="https://revistatimbo.com.ar/category/carnaval/"
-                                                        class="elementor-sub-item" tabindex="-1">CARNAVAL DE MI
-                                                        BARRIO</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6641">
-                                                    <a href="https://revistatimbo.com.ar/category/biri-biri/cambiar/"
-                                                        class="elementor-sub-item" tabindex="-1">CAMBIAR LAS
-                                                        COSTUMBRES</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6642">
-                                                    <a href="https://revistatimbo.com.ar/category/biri-biri/con-queso-y-crema-cocina-cualquiera/"
-                                                        class="elementor-sub-item" tabindex="-1">CON QUESO Y CREMA
-                                                        COCINA CUALQUIERA</a></li>
-                                            </ul>
+                                                class="elementor-item" tabindex="-1">RECITALES</a>
+
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7962">
                                             <a href="https://revistatimbo.com.ar/category/biri-biri/tinta/"
-                                                class="elementor-item" tabindex="-1">RESEÑAS</a></li>
+                                                class="elementor-item" tabindex="-1">LA BIBLIO</a>
+                                        </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4193">
                                             <a href="https://revistatimbo.com.ar/category/buenezas/"
-                                                class="elementor-item" tabindex="-1">FILA DEL ALMACÉN</a></li>
+                                                class="elementor-item" tabindex="-1">FILA DEL ALMACÉN</a>
+                                        </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15977">
                                             <a href="https://revistatimbo.com.ar/category/red/" class="elementor-item"
-                                                tabindex="-1">RED</a></li>
+                                                tabindex="-1">RED</a>
+                                        </li>
                                         <li
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-14695">
                                             <a href="https://revistatimbo.com.ar/somos/" class="elementor-item"
@@ -2069,11 +1961,13 @@
                                                 <li
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15624">
                                                     <a href="https://revistatimbo.com.ar/somos/"
-                                                        class="elementor-sub-item" tabindex="-1">SOMOS</a></li>
+                                                        class="elementor-sub-item" tabindex="-1">SOMOS</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11797">
                                                     <a href="https://revistatimbo.com.ar/category/editorial/"
-                                                        class="elementor-sub-item" tabindex="-1">EDITORIAL</a></li>
+                                                        class="elementor-sub-item" tabindex="-1">EDITORIAL</a>
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -2197,8 +2091,7 @@
                             data-id="5691d74" data-element_type="widget" data-widget_type="theme-site-logo.default">
                             <div class="elementor-widget-container">
                                 <a href="https://revistatimbo.com.ar">
-                                    <img width="300" height="300"
-                                        src="./imagenes/La Imprompta-f-blanco.png"
+                                    <img width="300" height="300" src="./imagenes/La Imprompta-f-blanco.png"
                                         class="attachment-full size-full wp-image-16261" alt=""
                                         srcset="./imagenes/La Imprompta-f-blanco.png, ./imagenes/La Imprompta-f-blanco.png"
                                         sizes="(max-width: 300px) 100vw, 300px" /> </a>
@@ -4350,8 +4243,8 @@
                             data-id="2ed6eb0" data-element_type="widget" data-widget_type="image.default">
                             <div class="elementor-widget-container">
                                 <a href="https://revistatimbo.com.ar">
-                                    <img src="./imagenes/La Imprompta-f-blanco.png"
-                                        title="logopng" alt="logopng" loading="lazy" /> </a>
+                                    <img src="./imagenes/La Imprompta-f-blanco.png" title="logopng" alt="logopng"
+                                        loading="lazy" /> </a>
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-0c98910 elementor-shape-circle elementor-grid-mobile-2 elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons"
@@ -4524,8 +4417,7 @@
                             data-id="1351c8c5" data-element_type="widget" data-widget_type="theme-site-logo.default">
                             <div class="elementor-widget-container">
                                 <a href="https://revistatimbo.com.ar">
-                                    <img width="300" height="300"
-                                        src="./imagenes/La Imprompta-f-blanco.png"
+                                    <img width="300" height="300" src="./imagenes/La Imprompta-f-blanco.png"
                                         class="attachment-full size-full wp-image-16261" alt=""
                                         srcset="./imagenes/La Imprompta-f-blanco.png, ./imagenes/La Imprompta-f-blanco.png"
                                         sizes="(max-width: 300px) 100vw, 300px" /> </a>
@@ -4547,11 +4439,13 @@
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8183">
                                                     <a href="https://revistatimbo.com.ar/category/conversa/conversas/"
-                                                        class="elementor-sub-item" tabindex="-1">CONVERSA</a></li>
+                                                        class="elementor-sub-item" tabindex="-1">CONVERSA</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6643">
                                                     <a href="https://revistatimbo.com.ar/category/conversa/cromanon/"
-                                                        class="elementor-sub-item" tabindex="-1">CROMAÑÓN</a></li>
+                                                        class="elementor-sub-item" tabindex="-1">CROMAÑÓN</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6637">
                                                     <a href="https://revistatimbo.com.ar/category/conversa/cosmovision-andina/"
@@ -4561,106 +4455,75 @@
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12885">
                                                     <a href="https://revistatimbo.com.ar/category/conversa/que-vivan-las-musicas/"
                                                         class="elementor-sub-item" tabindex="-1">QUE VIVAN LAS
-                                                        MÚSICAS</a></li>
+                                                        MÚSICAS</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-3644">
                                             <a href="https://revistatimbo.com.ar/category/palabra/"
-                                                class="elementor-item" tabindex="-1">PALABRA</a>
+                                                class="elementor-item" tabindex="-1">TIEMPOS VERBALES</a>
                                             <ul class="sub-menu elementor-nav-menu--dropdown">
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8353">
                                                     <a href="https://revistatimbo.com.ar/category/palabra/palabras/"
-                                                        class="elementor-sub-item" tabindex="-1">PALABRA</a></li>
+                                                        class="elementor-sub-item" tabindex="-1">YO</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6636">
                                                     <a href="https://revistatimbo.com.ar/category/palabra/cuchateesta/"
-                                                        class="elementor-sub-item" tabindex="-1">CUCHATE ESTA</a></li>
+                                                        class="elementor-sub-item" tabindex="-1">TÚ</a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6636">
+                                                    <a href="https://revistatimbo.com.ar/category/palabra/cuchateesta/"
+                                                        class="elementor-sub-item" tabindex="-1">ÉL</a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6636">
+                                                    <a href="https://revistatimbo.com.ar/category/palabra/cuchateesta/"
+                                                        class="elementor-sub-item" tabindex="-1">ELLOS</a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6636">
+                                                    <a href="https://revistatimbo.com.ar/category/palabra/cuchateesta/"
+                                                        class="elementor-sub-item" tabindex="-1">NOSOTROS</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-3643">
                                             <a href="https://revistatimbo.com.ar/category/critica-cultural/"
-                                                class="elementor-item" tabindex="-1">CRITIMBÓ</a>
-                                            <ul class="sub-menu elementor-nav-menu--dropdown">
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6639">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/teatro/"
-                                                        class="elementor-sub-item" tabindex="-1">TEATRO</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6646">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/literatura/"
-                                                        class="elementor-sub-item" tabindex="-1">LITERATURA</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6638">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/que-viva/"
-                                                        class="elementor-sub-item" tabindex="-1">QUE VIVA LA MÚSICA</a>
-                                                </li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6644">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/cine/"
-                                                        class="elementor-sub-item" tabindex="-1">CINE</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8202">
-                                                    <a href="https://revistatimbo.com.ar/category/critica-cultural/visuales/"
-                                                        class="elementor-sub-item" tabindex="-1">VISUALES</a></li>
-                                            </ul>
+                                                class="elementor-item" tabindex="-1">POETAS DEL PROMPT</a>
+
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-8579">
                                             <a href="https://revistatimbo.com.ar/category/salasabiertas/"
-                                                class="elementor-item" tabindex="-1">SALAS ABIERTAS</a>
-                                            <ul class="sub-menu elementor-nav-menu--dropdown">
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9697">
-                                                    <a href="https://revistatimbo.com.ar/category/salasabiertas/"
-                                                        class="elementor-sub-item" tabindex="-1">SALAS ABIERTAS</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6649">
-                                                    <a href="https://revistatimbo.com.ar/category/guiadeespaciosculturales/"
-                                                        class="elementor-sub-item" tabindex="-1">GUIA DE ESPACIOS
-                                                        CULTURALES</a></li>
-                                            </ul>
+                                                class="elementor-item" tabindex="-1">FULBITO</a>
+
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-6647">
                                             <a href="https://revistatimbo.com.ar/category/biri-biri/"
-                                                class="elementor-item" tabindex="-1">BIRI BIRI</a>
-                                            <ul class="sub-menu elementor-nav-menu--dropdown">
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6648">
-                                                    <a href="https://revistatimbo.com.ar/category/biri-biri/biribiri/"
-                                                        class="elementor-sub-item" tabindex="-1">BIRI BIRI</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6640">
-                                                    <a href="https://revistatimbo.com.ar/category/carnaval/"
-                                                        class="elementor-sub-item" tabindex="-1">CARNAVAL DE MI
-                                                        BARRIO</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6641">
-                                                    <a href="https://revistatimbo.com.ar/category/biri-biri/cambiar/"
-                                                        class="elementor-sub-item" tabindex="-1">CAMBIAR LAS
-                                                        COSTUMBRES</a></li>
-                                                <li
-                                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6642">
-                                                    <a href="https://revistatimbo.com.ar/category/biri-biri/con-queso-y-crema-cocina-cualquiera/"
-                                                        class="elementor-sub-item" tabindex="-1">CON QUESO Y CREMA
-                                                        COCINA CUALQUIERA</a></li>
-                                            </ul>
+                                                class="elementor-item" tabindex="-1">RECITALES</a>
+
                                         </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7962">
                                             <a href="https://revistatimbo.com.ar/category/biri-biri/tinta/"
-                                                class="elementor-item" tabindex="-1">RESEÑAS</a></li>
+                                                class="elementor-item" tabindex="-1">LA BIBLIO</a>
+                                        </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4193">
                                             <a href="https://revistatimbo.com.ar/category/buenezas/"
-                                                class="elementor-item" tabindex="-1">FILA DEL ALMACÉN</a></li>
+                                                class="elementor-item" tabindex="-1">FILA DEL ALMACÉN</a>
+                                        </li>
                                         <li
                                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15977">
                                             <a href="https://revistatimbo.com.ar/category/red/" class="elementor-item"
-                                                tabindex="-1">RED</a></li>
+                                                tabindex="-1">RED</a>
+                                        </li>
                                         <li
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-14695">
                                             <a href="https://revistatimbo.com.ar/somos/" class="elementor-item"
@@ -4669,11 +4532,13 @@
                                                 <li
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15624">
                                                     <a href="https://revistatimbo.com.ar/somos/"
-                                                        class="elementor-sub-item" tabindex="-1">SOMOS</a></li>
+                                                        class="elementor-sub-item" tabindex="-1">SOMOS</a>
+                                                </li>
                                                 <li
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11797">
                                                     <a href="https://revistatimbo.com.ar/category/editorial/"
-                                                        class="elementor-sub-item" tabindex="-1">EDITORIAL</a></li>
+                                                        class="elementor-sub-item" tabindex="-1">EDITORIAL</a>
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -4736,7 +4601,7 @@
             </div>
         </header>
     </div>
-    
+
     <script type='text/javascript'>
         const lazyloadRunObserver = () => {
             const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
